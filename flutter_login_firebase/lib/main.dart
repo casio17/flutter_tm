@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_firebase/features/app/splash_screen/splash_screen.dart';
-import 'package:flutter_login_firebase/user_auth/presentation/pages/login_page.dart';
+import 'package:flutter_login_firebase/features/user_auth/presentation/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
