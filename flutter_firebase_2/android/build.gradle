@@ -17,6 +17,13 @@ allprojects {
     }
 }
 
+
+buildscript{
+    repositories{
+        google()
+    }
+}
+
 rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"

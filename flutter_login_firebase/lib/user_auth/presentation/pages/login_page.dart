@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_firebase/features/user_auth/presentation/pages/home_page.dart';
-import 'package:flutter_login_firebase/features/user_auth/presentation/pages/sign_up_page.dart';
-import 'package:flutter_login_firebase/features/user_auth/presentation/widgets/form_container_widget.dart';
+import 'package:flutter_login_firebase/user_auth/presentation/pages/home_page.dart';
+import 'package:flutter_login_firebase/user_auth/presentation/pages/sign_up_page.dart';
+import 'package:flutter_login_firebase/user_auth/presentation/widgets/form_container_widget.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -15,38 +15,38 @@ class LoginPage extends StatelessWidget {
       body:   Center(
        
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: EdgeInsets.symmetric(horizontal: 15),
           child:  Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
+              Text(
                 "Login",
                 style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),
                 ),
 
-                const SizedBox(
+                SizedBox(
                   height: 30,
                 ),
           
-                const FormContainerWidget(
+                FormContainerWidget(
                   hintText: "Email",
                   isPasswordField: false,
                 ),
           
-                const SizedBox(height: 10,),
+                SizedBox(height: 10,),
   
-                const FormContainerWidget(
+                FormContainerWidget(
                   hintText: "Password",
                   isPasswordField: true,
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 30,
                 ),
 
                 GestureDetector(
                   onTap: (){
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => const HomePage()));
+                      context, MaterialPageRoute(builder: (context) => HomePage()));
                   },
                   child: Container(
                     width: double.infinity,
@@ -55,7 +55,7 @@ class LoginPage extends StatelessWidget {
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         "Login",
                         style: TextStyle(
@@ -64,18 +64,18 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10,),
+                SizedBox(height: 10,),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Don't have an account?"),
-                    const SizedBox(width: 5,),
+                    Text("Don't have an account?"),
+                    SizedBox(width: 5,),
                     GestureDetector(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder:(context) => const SignUpPage() ));
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => SignUpPage() ));
                       },
-                      child: const Text("Sign Up",
+                      child: Text("Sign Up",
                       style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
                     )
                   ],

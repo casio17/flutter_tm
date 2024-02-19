@@ -31,7 +31,7 @@ class FormContainerWidget extends StatefulWidget {
 
 
   @override
-  _FormContainerWidgetState createState() => _FormContainerWidgetState();
+  _FormContainerWidgetState createState() => new _FormContainerWidgetState();
 }
 
 class _FormContainerWidgetState extends State<FormContainerWidget> {
@@ -48,8 +48,8 @@ class _FormContainerWidgetState extends State<FormContainerWidget> {
         color: Colors.grey.withOpacity(.35),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: TextFormField(
-        style: const TextStyle(color: Colors.black),
+      child: new TextFormField(
+        style: TextStyle(color: Colors.black),
         controller: widget.controller,
         keyboardType: widget.inputType,
         key: widget.fieldKey,
@@ -57,19 +57,19 @@ class _FormContainerWidgetState extends State<FormContainerWidget> {
         onSaved: widget.onSaved,
         validator: widget.validator,
         onFieldSubmitted: widget.onFieldSubmitted,
-        decoration: InputDecoration(
+        decoration: new InputDecoration(
           border: InputBorder.none,
           filled: true,
           hintText: widget.hintText,
-          hintStyle: const TextStyle(color: Colors.black45),
-          suffixIcon: GestureDetector(
+          hintStyle: TextStyle(color: Colors.black45),
+          suffixIcon: new GestureDetector(
             onTap: () {
               setState(() {
                 _obscureText = !_obscureText;
               });
             },
             child:
-            widget.isPasswordField==true? Icon(_obscureText ? Icons.visibility_off : Icons.visibility, color: _obscureText == false ? Colors.blue : Colors.grey,) : const Text(""),
+            widget.isPasswordField==true? Icon(_obscureText ? Icons.visibility_off : Icons.visibility, color: _obscureText == false ? Colors.blue : Colors.grey,) : Text(""),
           ),
         ),
       ),
